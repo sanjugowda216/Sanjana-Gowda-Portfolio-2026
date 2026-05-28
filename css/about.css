@@ -1,0 +1,173 @@
+/* About Page Specific Styles */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.about-bio h3 {
+  font-size: 1.85rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.about-bio p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Skills Grid Style */
+.skills-section {
+  margin-bottom: 5rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.skills-category h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+  color: var(--accent-dark);
+  border-bottom: 2px solid var(--glass-border);
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.skill-tag {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(153, 225, 217, 0.25);
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+/* Education Table & Cards Style */
+.education-section {
+  margin-bottom: 5rem;
+}
+
+.education-card {
+  padding: 2.5rem;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.edu-school h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.edu-school p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+.edu-date {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.edu-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.edu-details h4 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.edu-list {
+  list-style: none;
+}
+
+.edu-list li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.edu-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+}
+
+/* Awards Cards Grid */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.award-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.award-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.award-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.award-info p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive elements */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .edu-details {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

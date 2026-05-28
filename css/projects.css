@@ -1,0 +1,288 @@
+/* Projects Page Specific Styles */
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+  padding: 3rem;
+}
+
+/* Alternating Layout */
+.project-card.alternate {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.project-card.alternate .project-info-panel {
+  order: 2;
+}
+
+.project-card.alternate .project-visual-panel {
+  order: 1;
+}
+
+/* Project Info Panel Styles */
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+.project-date {
+  color: var(--text-secondary);
+}
+
+.project-card h3 {
+  font-size: 2.15rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Rubric-aligned Details Grid (Table Style) */
+.project-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detail-row h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.detail-row p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Visual Mockup Panels */
+.project-visual-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+/* Interactive phone preview CSS */
+.phone-mockup {
+  width: 190px;
+  height: 380px;
+  background: var(--bg-dark);
+  border: 8px solid #1e1e24;
+  border-radius: 28px;
+  box-shadow: 0 15px 40px rgba(50, 41, 47, 0.2);
+  overflow: hidden;
+  position: relative;
+  border-color: #2a2a35;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--mint-cream);
+  padding: 1.25rem 0.85rem;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-header {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone-bell {
+  color: var(--accent-dark);
+  animation: pulseBell 2s infinite;
+}
+
+.phone-schedule {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.schedule-period {
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid rgba(112, 171, 175, 0.15);
+  font-size: 0.65rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.schedule-period.active {
+  background: rgba(153, 225, 217, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(153, 225, 217, 0.4);
+}
+
+.period-title {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.period-time {
+  font-size: 0.55rem;
+  color: var(--text-secondary);
+}
+
+/* Machine learning canvas mockup */
+.ml-dashboard {
+  width: 100%;
+  max-width: 320px;
+  height: 240px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 25px rgba(50, 41, 47, 0.08);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.dashboard-graph {
+  flex-grow: 1;
+  border-left: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10px;
+}
+
+.bar-chart {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+  align-items: flex-end;
+}
+
+.bar-item {
+  width: 24px;
+  background: linear-gradient(to top, var(--accent-dark), var(--accent));
+  border-radius: 4px 4px 0 0;
+  animation: growBar 1.5s ease-out forwards;
+}
+
+.canopy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  width: 100%;
+  max-width: 280px;
+  background: rgba(112, 171, 175, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px dashed var(--tropical-teal);
+}
+
+.grid-cell {
+  aspect-ratio: 1;
+  background: rgba(50, 41, 47, 0.05);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.grid-cell.detected {
+  background: rgba(153, 225, 217, 0.4);
+  border: 1px solid var(--accent);
+}
+
+.grid-cell.detected::after {
+  content: '🌲';
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: popTree 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes pulseBell {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 0 4px var(--accent)); }
+  100% { transform: scale(1); }
+}
+
+@keyframes growBar {
+  from { height: 0; }
+}
+
+@keyframes popTree {
+  from { transform: translate(-50%, -50%) scale(0); }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .project-card, .project-card.alternate {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+  
+  .project-card.alternate .project-info-panel,
+  .project-card.alternate .project-visual-panel {
+    order: unset;
+  }
+  
+  .project-visual-panel {
+    min-height: 280px;
+  }
+}

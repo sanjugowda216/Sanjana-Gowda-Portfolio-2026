@@ -1,0 +1,308 @@
+/* Resume Page Specific Styles */
+
+.resume-container {
+  max-width: 900px;
+  margin: 8rem auto 4rem auto;
+}
+
+/* Glassmorphic Resume Top Toolbar */
+.resume-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+}
+
+.resume-toolbar-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resume-toolbar-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Interactive Scrollable Resume Sheet Preview */
+.resume-preview-box {
+  background: rgba(50, 41, 47, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 1.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: inset 0 2px 10px rgba(50, 41, 47, 0.05);
+  display: flex;
+  justify-content: center;
+}
+
+/* Realistic A4 Page Look */
+.resume-paper {
+  background: #ffffff;
+  color: #1e1e24; /* Solid off-black for professional high-contrast reading */
+  width: 100%;
+  max-width: 800px;
+  min-height: 1050px; /* Aligns with A4 aspect ratios */
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(50, 41, 47, 0.12);
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* Resume Document Styling */
+.res-header {
+  border-bottom: 2px solid var(--shadow-grey);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.res-name-title h1 {
+  font-size: 2.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+  color: #1e1e24;
+}
+
+.res-name-title p {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tropical-teal);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.res-contact-info {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #55555d;
+}
+
+.res-contact-info p {
+  margin-bottom: 0.2rem;
+  color: #55555d;
+}
+
+/* Two-column layout in Resume */
+.res-body {
+  display: grid;
+  grid-template-columns: 1.9fr 1.1fr;
+  gap: 2.5rem;
+}
+
+/* Section Headings */
+.res-section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e1e24;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #dcdce2;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.res-section-title:first-of-type {
+  margin-top: 0;
+}
+
+/* Biography / Objective */
+.res-objective {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #33333b;
+  margin-bottom: 1.5rem;
+}
+
+/* Experience block styling */
+.res-exp-item {
+  margin-bottom: 1.25rem;
+}
+
+.res-exp-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 0.25rem;
+  color: #1e1e24;
+}
+
+.res-exp-company {
+  color: var(--tropical-teal);
+}
+
+.res-exp-date {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  color: #66666e;
+  font-weight: 600;
+}
+
+.res-exp-bullets {
+  list-style: none;
+  padding-left: 0.25rem;
+}
+
+.res-exp-bullets li {
+  margin-bottom: 0.35rem;
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.85rem;
+  color: #33333b;
+}
+
+.res-exp-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--tropical-teal);
+  font-weight: bold;
+}
+
+/* Right-side Column Items */
+.res-right-block {
+  margin-bottom: 1.5rem;
+}
+
+.res-right-block h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e1e24;
+  margin-bottom: 0.5rem;
+}
+
+.res-courses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: #33333b;
+}
+
+.res-accolades-list, .res-extracurriculars-list {
+  list-style: none;
+}
+
+.res-accolades-list li, .res-extracurriculars-list li {
+  font-size: 0.82rem;
+  margin-bottom: 0.5rem;
+  color: #33333b;
+  position: relative;
+  padding-left: 0.85rem;
+}
+
+.res-accolades-list li::before, .res-extracurriculars-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--tropical-teal);
+  font-size: 0.75rem;
+}
+
+.res-skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.res-skill-tag {
+  font-size: 0.78rem;
+  background: #f0f0f5;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #44444d;
+}
+
+/* Print CSS Stylesheet Overrides */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  body::before, body::after,
+  .header-nav, .resume-toolbar, .footer {
+    display: none !important;
+  }
+  
+  .container {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  .resume-container {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  .resume-preview-box {
+    padding: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .resume-paper {
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+  }
+}
+
+/* Responsiveness in preview container */
+@media (max-width: 768px) {
+  .resume-paper {
+    padding: 1.5rem;
+  }
+  
+  .res-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .res-contact-info {
+    text-align: left;
+  }
+  
+  .res-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .resume-preview-box {
+    padding: 1rem 0.5rem;
+  }
+  
+  .resume-toolbar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}

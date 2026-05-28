@@ -1,0 +1,111 @@
+/* Activities Page Specific Styles */
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-dark));
+  opacity: 0.8;
+}
+
+.activity-header {
+  margin-bottom: 1.25rem;
+}
+
+.activity-role {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.activity-org {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 0.5rem;
+}
+
+.activity-date {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.activity-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-badge {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.75rem;
+  background: rgba(153, 225, 217, 0.2);
+  border: 1px solid rgba(153, 225, 217, 0.4);
+  color: var(--text-primary);
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+
+.activity-bullets {
+  list-style: none;
+  flex-grow: 1;
+}
+
+.activity-bullets li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.activity-bullets li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--accent-dark);
+  font-size: 0.8rem;
+}
+
+/* Hover highlights */
+.activity-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(153, 225, 217, 0.4);
+}
+
+.activity-card:hover::before {
+  width: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}

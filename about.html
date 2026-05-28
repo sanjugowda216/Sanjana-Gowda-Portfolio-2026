@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Sanjana Gowda</title>
+  <title>About | Sanjana Gowda</title>
   <meta name="description" content="Learn more about Sanjana Gowda's background, education at Emerald High School, computer science skills, and academic achievements.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/about.css">
 </head>
-<body>
+<body class="page-about">
 
-  <!-- Navigation Bar -->
   <header class="header-nav" id="main-header">
-    <a href="index.html" class="logo" id="logo-home">
-      Sanjana Gowda<span class="logo-dot"></span>
-    </a>
+    <a href="index.html" class="logo" id="logo-home">Sanjana Gowda</a>
     <button class="nav-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
       <span></span>
       <span></span>
@@ -22,56 +20,45 @@
     </button>
     <ul class="nav-links" id="navigation-list">
       <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-      <li><a href="about.html" class="nav-link" id="nav-about">About Me</a></li>
+      <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
       <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
       <li><a href="activities.html" class="nav-link" id="nav-activities">Activities</a></li>
       <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
     </ul>
   </header>
 
-  <!-- Main Content Container -->
   <main class="container animate-fade-in" id="about-main-content">
-    
-    <h2 class="section-title" id="about-title-header">About Me</h2>
 
-    <!-- General Biography Section -->
-    <section class="about-grid" id="bio-section">
+    <header class="page-header">
+      <h1 id="about-title-header">About Me</h1>
+      <p>Student researcher and developer at Emerald High School, Dublin, CA.</p>
+    </header>
+
+    <section class="about-intro" id="bio-section">
       <div class="glass-card about-bio" id="card-biography">
-        <h3>My Journey & Aspirations</h3>
         <p>
-          Hello! My name is Sanjana Gowda, and I am a high school junior at Emerald High School in Dublin, California. Ever since I began coding, I have been deeply fascinated by how technology and engineering can address real-world problems. Whether designing simple applications or implementing advanced models, I love using technical skills to build meaningful solutions.
-        </p>
-        <p>
-          Beyond writing code, a significant focus of my efforts is dedicated to making STEM fields more inclusive. As a co-president of Girls Who Code, I work to establish supportive spaces for girls who want to learn computer science, helping them build the confidence to explore engineering pathways. I aim to continue developing my expertise in computer science and research through hand-on internships and project-based collaborations.
+          Junior at Emerald High School (Dublin, CA). I work on CS apps, ML research, and STEM outreach through Girls Who Code and Silicon Valley Scholars.
         </p>
       </div>
 
-      <div class="glass-card" id="card-quick-stats-about" style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
-        <h3 style="font-size: 1.35rem; border-bottom: 2px solid var(--glass-border); padding-bottom: 0.5rem; color: var(--accent-dark);">Core Principles</h3>
-        <p style="font-size: 0.95rem; font-style: italic; color: var(--text-secondary);">
-          "I believe that the best technical applications are those built with direct empathy for the community they serve. Technology is a tool to empower people, improve accessibility, and drive positive progress."
-        </p>
-        <div style="margin-top: 1rem;">
-          <p style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">INTEREST AREAS:</p>
-          <span class="badge badge-accent">Machine Learning</span>
-          <span class="badge badge-accent">Data Research</span>
-          <span class="badge badge-accent">App Development</span>
-          <span class="badge badge-accent">STEM Advocacy</span>
-        </div>
+      <div class="glass-card principles-card" id="card-quick-stats-about">
+        <p class="quote quote--jobs">Don't waste your time living someone else's life.</p>
+        <p class="quote-attribution">Steve Jobs</p>
+        <p class="interest-line"><span class="interest-label">Focus areas</span> Machine learning, data research, app development, STEM advocacy</p>
       </div>
     </section>
 
-    <!-- Education Section (GPA, Relevant Courses, Extracurriculars) -->
     <section class="education-section" id="education-section-block">
+      <h2 class="section-title">Education</h2>
       <div class="glass-card education-card" id="card-education-details">
         <div class="edu-header">
           <div class="edu-school">
             <h3>Emerald High School</h3>
             <p>High School Diploma Program</p>
           </div>
-          <span class="edu-date">August 2023 - Present (Graduation: June 2027)</span>
+          <span class="edu-date">Aug 2023 to Present · Grad 2027</span>
         </div>
-        
+
         <div class="edu-details">
           <div id="col-courses">
             <h4>Relevant Coursework</h4>
@@ -85,28 +72,27 @@
           <div id="col-extracurriculars">
             <h4>Academic & School Involvements</h4>
             <ul class="edu-list">
-              <li>Emerald High School Swim Team (JV Freshman Year, Varsity Sophomore & Junior Year)</li>
-              <li>Pleasanton Seahawks Club Swim Team (Competitive swimmer for 4 years)</li>
-              <li>Freshman Mentorship Program Leader (Guiding new students for 2 years)</li>
-              <li>GPA Achievement: 4.85 Weighted GPA</li>
+              <li>Emerald High School Swim Team (JV Freshman, Varsity Sophomore & Junior)</li>
+              <li>Pleasanton Seahawks Club Swim Team (4 years)</li>
+              <li>Freshman Mentorship Program Leader (2 years)</li>
+              <li>GPA: 4.85 Weighted</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Category Tags Grid -->
     <section class="skills-section" id="skills-section-block">
       <h2 class="section-title" id="skills-header">Skills & Technologies</h2>
       <div class="skills-container">
-        
+
         <div class="glass-card skills-category" id="skills-languages">
           <h3>Programming Languages</h3>
           <ul class="skills-list">
             <li class="skill-tag">Python</li>
             <li class="skill-tag">JavaScript</li>
             <li class="skill-tag">HTML5</li>
-            <li class="skill-tag">CSS3 / Vanilla CSS</li>
+            <li class="skill-tag">CSS3</li>
             <li class="skill-tag">Java</li>
           </ul>
         </div>
@@ -116,7 +102,7 @@
           <ul class="skills-list">
             <li class="skill-tag">Git & GitHub</li>
             <li class="skill-tag">App Development</li>
-            <li class="skill-tag">Machine Learning basics</li>
+            <li class="skill-tag">Machine Learning</li>
             <li class="skill-tag">UI/UX Design</li>
             <li class="skill-tag">VS Code</li>
           </ul>
@@ -125,7 +111,7 @@
         <div class="glass-card skills-category" id="skills-soft">
           <h3>Professional Competencies</h3>
           <ul class="skills-list">
-            <li class="skill-tag">Strong Communication</li>
+            <li class="skill-tag">Communication</li>
             <li class="skill-tag">Interpersonal Skills</li>
             <li class="skill-tag">Public Speaking</li>
             <li class="skill-tag">Community Organizing</li>
@@ -136,41 +122,75 @@
       </div>
     </section>
 
-    <!-- Academic Accolades -->
     <section class="awards-section" id="awards-section-block">
-      <h2 class="section-title" id="awards-header">Accolades & Distinctions</h2>
-      <div class="awards-grid">
-        
-        <div class="glass-card award-card" id="award-ap-scholar">
-          <div class="award-icon">🏆</div>
-          <div class="award-info">
-            <h4>AP Scholar with Honor Award</h4>
-            <p>Granted by College Board for outstanding academic performance on multiple AP examinations.</p>
-          </div>
+      <h2 class="section-title" id="awards-header">Accolades</h2>
+      <div class="awards-layout">
+
+        <div class="awards-photo-grid">
+          <article class="award-card award-card--photo" id="award-hackathon-china">
+            <div class="award-card-media">
+              <img src="assets/accolades/chinatown-hacks.jpg" alt="1st Place Chinatown Hacks" class="award-card-img">
+            </div>
+            <div class="award-card-body">
+              <span class="award-card-tag">Hackathon</span>
+              <h4>1st Place, Chinatown Hacks</h4>
+              <p>March 2025. Civic tech hackathon winner.</p>
+            </div>
+          </article>
+
+          <article class="award-card award-card--photo" id="award-lifeguard-ai">
+            <div class="award-card-media">
+              <img src="assets/accolades/lifeguard-ai.jpg" alt="LifeguardAI, Emerald Engineering Society" class="award-card-img">
+            </div>
+            <div class="award-card-body">
+              <span class="award-card-tag">AI · Engineering</span>
+              <h4>1st Place, LifeguardAI (EES)</h4>
+              <p>Best AI integration, Emerald Engineering Society.</p>
+            </div>
+          </article>
+
+          <article class="award-card award-card--photo" id="award-nvidia-gtc">
+            <div class="award-card-media">
+              <img src="assets/accolades/nvidia-gtc.jpg" alt="NVIDIA GTC with Jensen Huang" class="award-card-img">
+            </div>
+            <div class="award-card-body">
+              <span class="award-card-tag">Conference</span>
+              <h4>NVIDIA GTC</h4>
+              <p>Met Jensen Huang. GTC attendee.</p>
+            </div>
+          </article>
+
+          <article class="award-card award-card--photo" id="award-emerald-summit">
+            <div class="award-card-media">
+              <img src="assets/accolades/emerald-summit.jpg" alt="With Sabeer Bhatia at Emerald High School Summit" class="award-card-img">
+            </div>
+            <div class="award-card-body">
+              <span class="award-card-tag">Summit</span>
+              <h4>Feedback from Sabeer Bhatia</h4>
+              <p>Feedback on Bell Schedule and DigiMenu from Sabeer Bhatia (Hotmail co-founder) at Emerald Summit.</p>
+            </div>
+          </article>
+
         </div>
 
-        <div class="glass-card award-card" id="award-state-recognition">
-          <div class="award-icon">📜</div>
-          <div class="award-info">
+        <div class="awards-text-row">
+          <article class="award-card award-card--compact" id="award-ap-scholar">
+            <span class="award-card-tag">Academic</span>
+            <h4>AP Scholar with Honor</h4>
+            <p>College Board recognition for AP exams.</p>
+          </article>
+
+          <article class="award-card award-card--compact" id="award-state-recognition">
+            <span class="award-card-tag">Leadership</span>
             <h4>California State Assembly Recognition</h4>
-            <p>Certificate of Recognition awarded for outstanding character, leadership, and positive community contribution.</p>
-          </div>
-        </div>
+            <p>State Assembly certificate for leadership and service.</p>
+          </article>
 
-        <div class="glass-card award-card" id="award-hackathon-china">
-          <div class="award-icon">🥇</div>
-          <div class="award-info">
-            <h4>1st Place Overall — Chinatown Hacks</h4>
-            <p>Chinatown Hacks Hackathon (March 2025). Awarded top position for an innovative civic tech software solution.</p>
-          </div>
-        </div>
-
-        <div class="glass-card award-card" id="award-hackathon-bellheim">
-          <div class="award-icon">🎨</div>
-          <div class="award-info">
-            <h4>1st Place UI/UX — Bellheim Hackathon</h4>
-            <p>Bellheim Hackathon (February 2024). Won top prize in design category for creating a beautiful and accessible interface.</p>
-          </div>
+          <article class="award-card award-card--compact" id="award-hackathon-bellheim">
+            <span class="award-card-tag">Design</span>
+            <h4>1st Place, Bellheim Hackathon (UI/UX)</h4>
+            <p>February 2024.</p>
+          </article>
         </div>
 
       </div>
@@ -178,33 +198,34 @@
 
   </main>
 
-  <!-- Footer Section -->
   <footer class="footer" id="main-footer">
     <div class="footer-content">
       <div class="footer-brand">
         <h3>Sanjana Gowda</h3>
-        <p>High school junior specializing in CS, ML research, app development, and leadership in girls' STEM programs.</p>
+        <p>CS, ML, and STEM leadership.</p>
       </div>
       <div class="footer-links">
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="activities.html">Activities</a></li>
           <li><a href="resume.html">Resume</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Contact Info</h4>
-        <p>📍 Dublin, CA 94568</p>
-        <p>✉️ <a href="mailto:spgowda216@gmail.com">spgowda216@gmail.com</a></p>
-        <p>📞 +1 (925) 236-0123</p>
+        <h4>Contact</h4>
+        <p>Dublin, CA 94568</p>
+        <ul class="contact-links">
+          <li><a href="mailto:spgowda216@gmail.com" class="link-with-icon"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10 7 22 7"/></svg>spgowda216@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/sanjana-gowda-636a73354" target="_blank" rel="noopener" class="link-with-icon"><svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2 2 0 0 1-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+          <li><a href="https://github.com/sanjugowda216" target="_blank" rel="noopener" class="link-with-icon"><svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/></svg>GitHub</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Sanjana Gowda. All rights reserved.</p>
-      <p>Designed with ❤️ using modern Glassmorphism.</p>
+      <p>&copy; 2026 Sanjana Gowda</p>
     </div>
   </footer>
 

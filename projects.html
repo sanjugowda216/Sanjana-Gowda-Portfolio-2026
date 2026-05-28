@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects Showcase | Sanjana Gowda</title>
+  <title>Projects | Sanjana Gowda</title>
   <meta name="description" content="Explore Sanjana Gowda's technical projects: The Emerald High Bell Schedule App, UC Davis ML research, and Palisades Treetop Canopy Detection.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/projects.css">
 </head>
-<body>
+<body class="page-projects">
 
-  <!-- Navigation Bar -->
   <header class="header-nav" id="main-header">
-    <a href="index.html" class="logo" id="logo-home">
-      Sanjana Gowda<span class="logo-dot"></span>
-    </a>
+    <a href="index.html" class="logo" id="logo-home">Sanjana Gowda</a>
     <button class="nav-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
       <span></span>
       <span></span>
@@ -22,253 +20,254 @@
     </button>
     <ul class="nav-links" id="navigation-list">
       <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-      <li><a href="about.html" class="nav-link" id="nav-about">About Me</a></li>
+      <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
       <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
       <li><a href="activities.html" class="nav-link" id="nav-activities">Activities</a></li>
       <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
     </ul>
   </header>
 
-  <!-- Main Content Container -->
   <main class="container animate-fade-in" id="projects-main-content">
-    
-    <h2 class="section-title" id="projects-title-header">Academic & Engineering Projects</h2>
 
-    <div class="projects-list" id="projects-listing-container">
-      
-      <!-- Project 1: Emerald High School Bell Schedule App -->
-      <article class="glass-card project-card" id="project-bell-schedule">
-        
+    <header class="page-header">
+      <h1 id="projects-title-header">Projects</h1>
+      <p>School pathway work and personal projects.</p>
+    </header>
+
+    <nav class="projects-filter" id="projects-filter" aria-label="Filter projects by category">
+      <button type="button" class="projects-filter-btn active" data-filter="all">All</button>
+      <button type="button" class="projects-filter-btn" data-filter="pathway">Computer Science Pathway</button>
+      <button type="button" class="projects-filter-btn" data-filter="personal">Personal Projects</button>
+    </nav>
+
+    <section class="projects-section" id="cs-pathway-projects" data-category="pathway">
+      <h2 class="section-title">Computer Science Pathway</h2>
+      <p class="projects-section-desc">Emerald HS computer science pathway.</p>
+
+      <div class="projects-list">
+
+      <article class="glass-card project-card" id="project-bell-schedule" data-category="pathway">
+
         <div class="project-info-panel">
           <div class="project-meta">
-            <span class="project-course">📚 AP Computer Science / App Development</span>
-            <span class="project-date">Sept 2024 - May 2025</span>
+            <span class="project-course">AP Computer Science / App Development</span>
+            <span class="project-date">Sept 2024 to May 2025</span>
           </div>
           <h3>Emerald High School Bell Schedule App</h3>
-          
+
           <div class="project-tags">
-            <span class="badge badge-accent">App Development</span>
+            <span class="badge badge-accent">App Dev</span>
             <span class="badge badge-accent">JavaScript</span>
-            <span class="badge badge-accent">HTML5/CSS3</span>
-            <span class="badge badge-accent">UI/UX Design</span>
-            <span class="badge badge-accent">Git</span>
+            <span class="badge badge-accent">UI/UX</span>
           </div>
 
-          <!-- Structured Project Details Grid aligned with Rubric -->
-          <div class="project-details-grid">
-            <div class="detail-row">
-              <h4>Objective</h4>
-              <p>Develop a robust, highly responsive mobile web application to help over 2,000 students and faculty navigate the high school's rotating schedules, class blocks, and real-time announcements.</p>
-            </div>
-            <div class="detail-row">
-              <h4>Responsibilities</h4>
-              <p>Designed the user interface from scratch following modern accessibility guidelines. Coded the front-end schedule parsing engine, integrated dynamic counting tickers for active class periods, and optimized client-side caching for offline availability.</p>
-            </div>
-            <div class="detail-row">
-              <h4>Key Learnings</h4>
-              <p>Mastered client-side data parsing, viewport responsive grids, local browser caching mechanisms, and gathered real-world feedback to iterate on UI/UX elements based on student testing.</p>
-            </div>
-          </div>
+          <ul class="project-bullets">
+            <li>Mobile schedule app used by 2,000+ students and staff at Emerald HS.</li>
+            <li>Built UI, schedule parsing, and offline-friendly front end.</li>
+          </ul>
 
           <div class="project-actions">
-            <a href="https://github.com/sanjugowda216/Sanjana-Gowda-Portfolio-2026" class="btn btn-primary" target="_blank" id="btn-p1-git">View Repo</a>
-            <a href="assets/bell_schedule_documentation.pdf" download class="btn btn-secondary" id="btn-p1-doc">📥 Documentation</a>
-            <a href="assets/bell_schedule_rubric.pdf" download class="btn btn-secondary" id="btn-p1-rubric">📋 Rubric</a>
+            <a href="https://apps.apple.com/us/app/ehs-bell-schedule/id6642642871" class="btn btn-primary" target="_blank" rel="noopener" id="btn-p1-appstore">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              App Store
+            </a>
+            <a href="https://github.com/alexliao95311/ehsbellschedule-new" class="btn btn-secondary" target="_blank" rel="noopener" id="btn-p1-git">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://github.com/alexliao95311/ehs-schedule-privacy-policy" class="btn btn-secondary" target="_blank" rel="noopener" id="btn-p1-privacy">Privacy Policy</a>
           </div>
         </div>
 
-        <!-- Phone Mockup Visual Panel -->
         <div class="project-visual-panel">
-          <div class="phone-mockup" id="p1-phone-container">
-            <div class="phone-screen">
-              <div class="phone-header">
-                <span>Emerald High School</span>
-                <span class="phone-bell">🔔</span>
-              </div>
-              <div class="phone-schedule">
-                <div class="schedule-period active">
-                  <div class="period-title">Period 3: AP Calc BC</div>
-                  <div class="period-time">10:15 AM - 11:05 AM</div>
-                  <div style="font-size: 0.5rem; font-weight: 700; color: var(--accent-dark); margin-top: 0.25rem;">⏰ Active Block (14m left)</div>
-                </div>
-                <div class="schedule-period">
-                  <div class="period-title">Period 4: AP Seminar</div>
-                  <div class="period-time">11:10 AM - 12:00 PM</div>
-                </div>
-                <div class="schedule-period" style="background: rgba(112, 171, 175, 0.05);">
-                  <div class="period-title">Lunch Recess</div>
-                  <div class="period-time">12:00 PM - 12:45 PM</div>
-                </div>
-                <div class="schedule-period">
-                  <div class="period-title">Period 5: AP Lit & Comp</div>
-                  <div class="period-time">12:50 PM - 01:40 PM</div>
-                </div>
-              </div>
-            </div>
+          <div class="project-photo-wrap project-photo-wrap--phone" id="p1-phone-container">
+            <img src="assets/projects/bell-schedule.jpg" alt="Emerald Bell Schedule App">
           </div>
         </div>
 
       </article>
 
-      <!-- Project 2: COSMOS UC Davis Machine Learning -->
-      <article class="glass-card project-card alternate" id="project-cosmos-ml">
-        
+      </div>
+    </section>
+
+    <section class="projects-section" id="personal-projects" data-category="personal">
+      <h2 class="section-title">Personal Projects</h2>
+      <p class="projects-section-desc">Hackathons, nonprofits, and research.</p>
+
+      <div class="projects-list" id="projects-listing-container">
+
+      <article class="glass-card project-card" id="project-sv-scholars" data-category="personal">
+
         <div class="project-info-panel">
           <div class="project-meta">
-            <span class="project-course">📚 COSMOS Summer Program — UC Davis</span>
-            <span class="project-date">June 2025 - July 2025</span>
+            <span class="project-course">Nonprofit · STEM Education</span>
+            <span class="project-date">June 2025 to Present</span>
           </div>
-          <h3>COSMOS Machine Learning Research</h3>
-          
+          <h3>Silicon Valley Scholars</h3>
+
           <div class="project-tags">
-            <span class="badge badge-accent">Machine Learning</span>
-            <span class="badge badge-accent">Python</span>
-            <span class="badge badge-accent">Data Preprocessing</span>
-            <span class="badge badge-accent">Feature Engineering</span>
+            <span class="badge badge-accent">Co-Founder</span>
+            <span class="badge badge-accent">STEM</span>
+            <span class="badge badge-accent">Nonprofit</span>
           </div>
 
-          <!-- Structured Project Details Grid aligned with Rubric -->
-          <div class="project-details-grid">
-            <div class="detail-row">
-              <h4>Objective</h4>
-              <p>Apply supervised machine learning techniques to process multi-variable datasets and benchmark performance metrics across decision trees, random forests, and SVM classification algorithms.</p>
-            </div>
-            <div class="detail-row">
-              <h4>Responsibilities</h4>
-              <p>Cleaned and prepared raw test datasets, handled missing variables, analyzed multi-feature covariance matrices, developed classifier scripts in Python, and plotted ROC curves to evaluate accuracy levels.</p>
-            </div>
-            <div class="detail-row">
-              <h4>Key Learnings</h4>
-              <p>Gained understanding of model overfitting hazards, cross-validation concepts, standard normalization algorithms, and precision-recall trade-offs in clinical and engineering contexts.</p>
-            </div>
-          </div>
+          <ul class="project-bullets">
+            <li>Free summer classes; paid school-year programs and private lessons (70+ students).</li>
+            <li>Raised $3k+; Tech Nights, Fallon engineering, and svscholars.org.</li>
+          </ul>
 
           <div class="project-actions">
-            <a href="https://github.com/sanjugowda216/Sanjana-Gowda-Portfolio-2026" class="btn btn-primary" target="_blank" id="btn-p2-git">View Code</a>
-            <a href="assets/cosmos_documentation.pdf" download class="btn btn-secondary" id="btn-p2-doc">📥 Poster PDF</a>
-            <a href="assets/cosmos_rubric.pdf" download class="btn btn-secondary" id="btn-p2-rubric">📋 Rubric</a>
+            <a href="http://svscholars.org" target="_blank" rel="noopener" class="btn btn-primary" id="btn-p0-site">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Visit Live Site
+            </a>
+            <a href="activities.html" class="btn btn-secondary" id="btn-p0-activities">See Activities</a>
           </div>
         </div>
 
-        <!-- ML Chart Mockup Visual Panel -->
         <div class="project-visual-panel">
-          <div class="ml-dashboard" id="p2-dashboard-container">
-            <div class="dashboard-title">📈 Model Accuracy Evaluation</div>
-            <div class="dashboard-graph">
-              <div class="bar-chart">
-                <div class="bar-item" style="height: 65%;" title="Decision Tree: 65%"></div>
-                <div class="bar-item" style="height: 82%;" title="Random Forest: 82%"></div>
-                <div class="bar-item" style="height: 74%;" title="SVM Classifier: 74%"></div>
-                <div class="bar-item" style="height: 94%;" title="Ensemble Model: 94%"></div>
-              </div>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.6rem; font-weight: 700; color: var(--text-secondary);">
-              <span>DT</span>
-              <span>RF</span>
-              <span>SVM</span>
-              <span>ENS (Best)</span>
-            </div>
+          <div class="project-photo-wrap">
+            <img src="assets/projects/sv-scholars.jpg" alt="Silicon Valley Scholars Tech Night presentation">
           </div>
         </div>
 
       </article>
 
-      <!-- Project 3: Palisades Treetop Canopy Detection Research -->
-      <article class="glass-card project-card" id="project-canopy-detection">
-        
+      <article class="glass-card project-card alternate" id="project-cosmos-pathguide" data-category="personal">
+
         <div class="project-info-panel">
           <div class="project-meta">
-            <span class="project-course">🔬 Research under Prof. Ali Moghimi — UC Davis</span>
-            <span class="project-date">July 2025 - Present</span>
+            <span class="project-course">COSMOS, UC Davis</span>
+            <span class="project-date">June to July 2025</span>
           </div>
-          <h3>Palisades Treetop Canopy Detection</h3>
-          
+          <h3>PathGuide: Sidewalk Object Detection</h3>
+
           <div class="project-tags">
             <span class="badge badge-accent">Computer Vision</span>
-            <span class="badge badge-accent">Deep Learning</span>
-            <span class="badge badge-accent">Remote Sensing</span>
             <span class="badge badge-accent">Python</span>
-            <span class="badge badge-accent">Research Paper</span>
+            <span class="badge badge-accent">ML</span>
           </div>
 
-          <!-- Structured Project Details Grid aligned with Rubric -->
-          <div class="project-details-grid">
-            <div class="detail-row">
-              <h4>Objective</h4>
-              <p>Construct automated segmentation and object detection workflows using deep neural networks to catalog tree counts and estimate forestry canopy coverage in remote high-resolution aerial imagery.</p>
-            </div>
-            <div class="detail-row">
-              <h4>Responsibilities</h4>
-              <p>Pre-processed geospatial drone maps, established training dataset bounding annotations, implemented feature-extraction layers, fine-tuned neural models, and assisted in drafting the methodologies section of the research paper.</p>
-            </div>
-            <div class="detail-row">
-              <h4>Key Learnings</h4>
-              <p>Learned geospatial map formatting, Convolutional Neural Network architectures (CNNs), coordinate systems mapping, data augmentation under class imbalances, and scientific paper structures.</p>
-            </div>
-          </div>
+          <ul class="project-bullets">
+            <li>Sidewalk obstacle detection for visually impaired navigation (COSMOS UC Davis).</li>
+            <li>Trained and evaluated YOLOv8/DETR models on custom datasets.</li>
+          </ul>
 
           <div class="project-actions">
-            <a href="https://github.com/sanjugowda216/Sanjana-Gowda-Portfolio-2026" class="btn btn-primary" target="_blank" id="btn-p3-git">View Research</a>
-            <a href="assets/canopy_research_paper.pdf" download class="btn btn-secondary" id="btn-p3-doc">📥 Research Paper</a>
-            <a href="assets/canopy_rubric.pdf" download class="btn btn-secondary" id="btn-p3-rubric">📋 Rubric</a>
+            <a href="https://github.com/sanjugowda216/COSMOS25Project" class="btn btn-primary" target="_blank" rel="noopener" id="btn-p2-git">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="assets/projects/pathguide.png" class="btn btn-secondary" target="_blank" rel="noopener" id="btn-p2-doc">Poster</a>
           </div>
         </div>
 
-        <!-- Canopy Grid Bounding Box Visual Panel -->
         <div class="project-visual-panel">
-          <div class="canopy-grid" id="p3-grid-container">
-            <div class="grid-cell detected"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell detected"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell detected"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell detected"></div>
-            <div class="grid-cell detected"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell detected"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell detected"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell detected"></div>
+          <div class="project-photo-wrap" id="p2-pathguide-container">
+            <img src="assets/projects/pathguide.jpg" alt="PathGuide team presenting at COSMOS UC Davis">
           </div>
         </div>
 
       </article>
 
-    </div>
+      <article class="glass-card project-card" id="project-digimenu" data-category="personal">
+
+        <div class="project-info-panel">
+          <div class="project-meta">
+            <span class="project-course">Chinatown Hacks · Civic Tech</span>
+            <span class="project-date">March 2025</span>
+          </div>
+          <h3>DigiMenu</h3>
+
+          <div class="project-tags">
+            <span class="badge badge-accent">1st Place</span>
+            <span class="badge badge-accent">UI/UX</span>
+          </div>
+
+          <ul class="project-bullets">
+            <li>Digital menus for Chinatown restaurants (English + Chinese).</li>
+            <li>1st place at Chinatown Hacks 2025; team earned NVIDIA GTC tickets.</li>
+          </ul>
+
+          <div class="project-actions">
+            <a href="https://github.com/alexliao95311/menu-catalog" class="btn btn-primary" target="_blank" rel="noopener" id="btn-p-digimenu-git">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-visual-panel">
+          <div class="project-photo-wrap" id="p-digimenu-container">
+            <img src="assets/projects/digimenu.jpg" alt="DigiMenu at Chinatown Hacks">
+          </div>
+        </div>
+
+      </article>
+
+      <article class="glass-card project-card alternate" id="project-canopy-detection" data-category="personal">
+
+        <div class="project-info-panel">
+          <div class="project-meta">
+            <span class="project-course">UC Davis, Prof. Ali Moghimi</span>
+            <span class="project-date">July 2025 to Present</span>
+          </div>
+          <h3>Palisades Treetop Canopy Detection</h3>
+
+          <div class="project-tags">
+            <span class="badge badge-accent">Computer Vision</span>
+            <span class="badge badge-accent">Python</span>
+            <span class="badge badge-accent">Research</span>
+          </div>
+
+          <ul class="project-bullets">
+            <li>Tree and canopy detection from aerial drone imagery (UC Davis research).</li>
+            <li>Data prep, model training, and annotation for wildfire recovery mapping.</li>
+          </ul>
+
+        </div>
+
+        <div class="project-visual-panel">
+          <div class="project-photo-wrap" id="p3-canopy-container">
+            <img src="assets/projects/palisades-canopy.jpg" alt="Palisades canopy detection">
+          </div>
+        </div>
+
+      </article>
+
+      </div>
+    </section>
 
   </main>
 
-  <!-- Footer Section -->
   <footer class="footer" id="main-footer">
     <div class="footer-content">
       <div class="footer-brand">
         <h3>Sanjana Gowda</h3>
-        <p>High school junior specializing in CS, ML research, app development, and leadership in girls' STEM programs.</p>
+        <p>CS, ML, and STEM leadership.</p>
       </div>
       <div class="footer-links">
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="activities.html">Activities</a></li>
           <li><a href="resume.html">Resume</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Contact Info</h4>
-        <p>📍 Dublin, CA 94568</p>
-        <p>✉️ <a href="mailto:spgowda216@gmail.com">spgowda216@gmail.com</a></p>
-        <p>📞 +1 (925) 236-0123</p>
+        <h4>Contact</h4>
+        <p>Dublin, CA 94568</p>
+        <ul class="contact-links">
+          <li><a href="mailto:spgowda216@gmail.com" class="link-with-icon"><svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10 7 22 7"/></svg>spgowda216@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/sanjana-gowda-636a73354" target="_blank" rel="noopener" class="link-with-icon"><svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2 2 0 0 1-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+          <li><a href="https://github.com/sanjugowda216" target="_blank" rel="noopener" class="link-with-icon"><svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/></svg>GitHub</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Sanjana Gowda. All rights reserved.</p>
-      <p>Designed with ❤️ using modern Glassmorphism.</p>
+      <p>&copy; 2026 Sanjana Gowda</p>
     </div>
   </footer>
 

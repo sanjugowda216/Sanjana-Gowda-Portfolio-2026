@@ -6,15 +6,13 @@
   <title>Sanjana Gowda | Portfolio</title>
   <meta name="description" content="Sanjana Gowda's professional academic and computer science portfolio. Showcasing machine learning research, software apps, leadership, and accolades.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body class="home-page">
 
-  <!-- Navigation Bar -->
   <header class="header-nav" id="main-header">
-    <a href="index.html" class="logo" id="logo-home">
-      Sanjana Gowda<span class="logo-dot"></span>
-    </a>
+    <a href="index.html" class="logo" id="logo-home">Sanjana Gowda</a>
     <button class="nav-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
       <span></span>
       <span></span>
@@ -22,124 +20,144 @@
     </button>
     <ul class="nav-links" id="navigation-list">
       <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-      <li><a href="about.html" class="nav-link" id="nav-about">About Me</a></li>
+      <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
       <li><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
       <li><a href="activities.html" class="nav-link" id="nav-activities">Activities</a></li>
       <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
     </ul>
   </header>
 
-  <!-- Main Content Container -->
-  <main class="container" id="home-main-content">
-    
-    <!-- Hero & Stats Section -->
-    <section class="hero-section animate-fade-in" id="hero-block">
-      <div class="hero-content">
-        <h2>High School Junior</h2>
-        <h1>Building tech to explore <span>real-world problems</span>.</h1>
+  <main id="home-main-content">
+
+    <section class="hero-split" id="hero-block">
+      <div class="hero-photo">
+        <img src="assets/profile.png" alt="Sanjana Gowda" id="img-avatar"
+             onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';">
+        <div class="hero-photo-placeholder" id="photo-placeholder" style="display:none;">Photo: assets/profile.png</div>
+      </div>
+
+      <div class="hero-content-panel">
+        <p class="hero-eyebrow" id="txt-profile-school">Emerald High School · Junior</p>
+
+        <div class="hero-heading">
+          <h1>Sanjana Gowda</h1>
+          <p class="hero-tagline">
+            Founder of Silicon Valley Scholars
+            <a href="http://svscholars.org" target="_blank" rel="noopener" class="hero-tagline-btn link-with-icon">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              visit svscholars.org
+            </a>
+          </p>
+        </div>
+
         <p class="hero-desc">
-          I am a student researcher and developer passionate about computer science, machine learning, and engineering. From building tools used by thousands of students to carrying out forestry ML research at UC Davis, I thrive on translating code into tangible community impact.
+          CS and ML student building apps, research tools, and STEM programs in the Tri-Valley.
         </p>
+
         <div class="hero-actions">
           <a href="projects.html" class="btn btn-primary" id="btn-explore-projects">View Projects</a>
-          <a href="about.html" class="btn btn-secondary" id="btn-learn-about">More About Me</a>
+          <a href="about.html" class="hero-link" id="btn-learn-about">About Me <span class="arrow">&rarr;</span></a>
         </div>
-      </div>
-      
-      <div class="profile-showcase">
-        <div class="glass-card profile-card" id="profile-details-card">
-          <div class="profile-img-container">
-            <img src="assets/profile.jpg" alt="Sanjana Gowda" class="profile-img" id="img-avatar">
+
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/sanjana-gowda-636a73354" target="_blank" rel="noopener" class="link-with-icon">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2 2 0 0 1-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/sanjugowda216" target="_blank" rel="noopener" class="link-with-icon">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <div class="hero-stats" id="profile-stats-container">
+          <div class="hero-stat">
+            <span class="val" id="stat-gpa">4.85</span>
+            <span class="label">Weighted GPA</span>
           </div>
-          <h3 class="profile-title" id="txt-profile-name">Sanjana Gowda</h3>
-          <p class="profile-subtitle" id="txt-profile-school">EMERALD HIGH SCHOOL • JUNIOR</p>
-          
-          <!-- Key Stats for Rubric Compliance -->
-          <div class="stats-grid" id="profile-stats-container">
-            <div class="stat-item">
-              <span class="stat-val" id="stat-gpa">4.85</span>
-              <span class="stat-label">Weighted GPA</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-val" id="stat-age">17</span>
-              <span class="stat-label">Current Age</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-val" id="stat-grad">2027</span>
-              <span class="stat-label">Grad Year</span>
-            </div>
+          <div class="hero-stat">
+            <span class="val" id="stat-age">17</span>
+            <span class="label">Age</span>
+          </div>
+          <div class="hero-stat">
+            <span class="val" id="stat-grad">2027</span>
+            <span class="label">Grad Year</span>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Quick Sections Overview (Feature Cards) -->
-    <section class="feature-section animate-fade-in" id="overview-grid-block" style="animation-delay: 0.2s;">
-      <h2 class="section-title" id="overview-header">Explore My Work</h2>
-      <div class="feature-grid">
-        
-        <!-- About Me Pathway Card -->
-        <div class="glass-card feature-card" id="card-path-about">
-          <div class="feature-icon">👤</div>
+    <section class="explore-section" id="overview-grid-block">
+      <h2 class="section-title" id="overview-header">Explore</h2>
+      <div class="explore-grid">
+
+        <a href="about.html" class="explore-card" id="card-path-about">
           <h3>Academics & Bio</h3>
-          <p>
-            Learn more about my academic background, advanced courses (AP Calculus, AP Comp Sci), academic accolades, and my mission to support girls in STEM.
-          </p>
-          <a href="about.html" class="feature-link" id="link-path-about">Read full bio <span>&rarr;</span></a>
-        </div>
+          <p>Education, skills, and awards.</p>
+          <span class="link">Read bio &rarr;</span>
+        </a>
 
-        <!-- Projects Pathway Card -->
-        <div class="glass-card feature-card" id="card-path-projects">
-          <div class="feature-icon">🚀</div>
-          <h3>Featured Projects</h3>
-          <p>
-            Dive into my technical creations, including a high school schedule app used by 2,000+ students, and machine learning research conducted at UC Davis.
-          </p>
-          <a href="projects.html" class="feature-link" id="link-path-projects">Discover projects <span>&rarr;</span></a>
-        </div>
+        <a href="projects.html" class="explore-card" id="card-path-projects">
+          <h3>Projects</h3>
+          <p>Apps, hackathons, and research.</p>
+          <span class="link">View projects &rarr;</span>
+        </a>
 
-        <!-- Activities Pathway Card -->
-        <div class="glass-card feature-card" id="card-path-activities">
-          <div class="feature-icon">🏆</div>
-          <h3>Leadership & Sport</h3>
-          <p>
-            Browse my extracurricular roles: Co-founding Silicon Valley Scholars, leading Girls Who Code, dancing, lifeguarding, and tutoring.
-          </p>
-          <a href="activities.html" class="feature-link" id="link-path-activities">Explore activities <span>&rarr;</span></a>
-        </div>
+        <a href="activities.html" class="explore-card" id="card-path-activities">
+          <h3>Activities</h3>
+          <p>Leadership, STEM, and community work.</p>
+          <span class="link">See activities &rarr;</span>
+        </a>
 
       </div>
     </section>
 
   </main>
 
-  <!-- Footer Section -->
   <footer class="footer" id="main-footer">
     <div class="footer-content">
       <div class="footer-brand">
         <h3>Sanjana Gowda</h3>
-        <p>High school junior specializing in CS, ML research, app development, and leadership in girls' STEM programs.</p>
+        <p>CS, ML, and STEM leadership.</p>
       </div>
       <div class="footer-links">
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="activities.html">Activities</a></li>
           <li><a href="resume.html">Resume</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Contact Info</h4>
-        <p>📍 Dublin, CA 94568</p>
-        <p>✉️ <a href="mailto:spgowda216@gmail.com">spgowda216@gmail.com</a></p>
-        <p>📞 +1 (925) 236-0123</p>
+        <h4>Contact</h4>
+        <p>Dublin, CA 94568</p>
+        <ul class="contact-links">
+          <li>
+            <a href="mailto:spgowda216@gmail.com" class="link-with-icon">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10 7 22 7"/></svg>
+              spgowda216@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/sanjana-gowda-636a73354" target="_blank" rel="noopener" class="link-with-icon">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2 2 0 0 1-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/sanjugowda216" target="_blank" rel="noopener" class="link-with-icon">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Sanjana Gowda. All rights reserved.</p>
-      <p>Designed with ❤️ using modern Glassmorphism.</p>
+      <p>&copy; 2026 Sanjana Gowda</p>
     </div>
   </footer>
 

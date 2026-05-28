@@ -1,0 +1,44 @@
+.link-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.link-with-icon:hover {
+  color: var(--text);
+}
+
+.link-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.footer-contact .contact-links {
+  list-style: none;
+}
+
+.footer-contact .contact-links li {
+  margin-bottom: 0.5rem;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.hero-social .link-with-icon {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.btn .btn-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+}

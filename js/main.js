@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Navigation Toggle Logic
   const navToggle = document.querySelector('.nav-toggle');
   const navLinksList = document.querySelector('.nav-links');
-  
+
   if (navToggle && navLinksList) {
     navToggle.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinksList.classList.toggle('active');
     });
 
-    // Close menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('active');
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!navLinksList.contains(e.target) && !navToggle.contains(e.target)) {
         navToggle.classList.remove('active');
@@ -27,23 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Header Scroll State Transition
-  const header = document.querySelector('.header-nav');
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
-    }
-  };
-
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Trigger once on load in case of direct load below fold
-
-  // Dynamic Page Active Tab Highlight
   const currentPath = window.location.pathname;
   const pageName = currentPath.split('/').pop() || 'index.html';
-  
+
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
     if (href === pageName || (pageName === '' && href === 'index.html')) {
@@ -53,17 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Ambient Cursor Blob Glow effect for modern cards
-  const cards = document.querySelectorAll('.glass-card');
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      // Set variables inside CSS for dynamic lighting effects if desired
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
+  const projectFilter = document.getElementById('projects-filter');
+  if (projectFilter) {
+    const sections = document.querySelectorAll('.projects-section[data-category]');
+
+    projectFilter.querySelectorAll('.projects-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        projectFilter.querySelectorAll('.projects-filter-btn').forEach(b => {
+          b.classList.toggle('active', b === btn);
+        });
+
+        sections.forEach(section => {
+          const category = section.dataset.category;
+          const show = filter === 'all' || filter === category;
+          section.classList.toggle('is-hidden', !show);
+        });
+      });
     });
-  });
+  }
 });

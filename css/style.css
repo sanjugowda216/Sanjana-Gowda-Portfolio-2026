@@ -21,13 +21,21 @@
   --accent-inverse: var(--ink);
 
   /* Effects */
-  --glow: none;
-  --shadow-soft: none;
+  --glow-teal: 0 0 24px rgba(31, 122, 140, 0.35);
+  --glow-soft: 0 0 40px rgba(31, 122, 140, 0.1);
+  --glow-card: 0 8px 32px rgba(0, 0, 0, 0.18), 0 0 20px rgba(31, 122, 140, 0.1);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.12);
   --radius: 12px;
 
   --max-width: 1100px;
   --header-height: 64px;
   --transition: 0.2s ease;
+
+  /* Typography */
+  --text-body: 1.0625rem;
+  --text-body-sm: 0.9375rem;
+  --text-caption: 0.875rem;
+  --text-label: 0.8125rem;
 }
 
 *, *::before, *::after {
@@ -38,7 +46,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
@@ -46,7 +54,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
 }
 
@@ -59,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   color: var(--text-secondary);
   font-weight: 400;
+  font-size: var(--text-body-sm);
 }
 
 a {
@@ -98,12 +107,13 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 2rem;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .glass-card:hover,
 .panel:hover {
-  border-color: var(--border-light);
+  border-color: rgba(31, 122, 140, 0.4);
+  box-shadow: var(--glow-card);
 }
 
 /* Header */
@@ -141,7 +151,7 @@ a {
 }
 
 .nav-link {
-  font-size: 0.8rem;
+  font-size: var(--text-caption);
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -196,16 +206,17 @@ a {
 }
 
 .page-header h1 {
-  font-size: 2.25rem;
+  font-size: 2.35rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 48px rgba(31, 122, 140, 0.18);
 }
 
 .page-header p {
-  font-size: 0.95rem;
+  font-size: var(--text-body);
   max-width: 520px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 .page-header--split {
@@ -265,7 +276,7 @@ a {
 }
 
 .section-title {
-  font-size: 0.75rem;
+  font-size: var(--text-label);
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -283,14 +294,14 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.5rem;
+  padding: 0.75rem 1.6rem;
   font-family: inherit;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: var(--text-caption);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
   border: 1px solid transparent;
   border-radius: 999px;
 }
@@ -299,12 +310,14 @@ a {
   background: var(--teal);
   color: var(--white);
   border-color: var(--teal);
+  box-shadow: 0 0 0 rgba(31, 122, 140, 0);
 }
 
 .btn-primary:hover {
   background: #268fa3;
   border-color: #268fa3;
   color: var(--white);
+  box-shadow: var(--glow-teal);
 }
 
 .btn-secondary {
@@ -314,17 +327,18 @@ a {
 }
 
 .btn-secondary:hover {
-  border-color: var(--border-light);
+  border-color: rgba(31, 122, 140, 0.45);
   background: var(--bg-elevated);
+  box-shadow: 0 0 18px rgba(31, 122, 140, 0.12);
 }
 
 /* Badges */
 .badge {
   display: inline-block;
-  padding: 0.25rem 0.6rem;
+  padding: 0.3rem 0.65rem;
   border: 1px solid var(--border);
   color: var(--text-secondary);
-  font-size: 0.7rem;
+  font-size: var(--text-label);
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -359,14 +373,14 @@ a {
 }
 
 .footer-brand p {
-  font-size: 0.85rem;
+  font-size: var(--text-body-sm);
   max-width: 280px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .footer-links h4,
 .footer-contact h4 {
-  font-size: 0.7rem;
+  font-size: var(--text-label);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -383,7 +397,7 @@ a {
 }
 
 .footer-links a {
-  font-size: 0.85rem;
+  font-size: var(--text-body-sm);
   color: var(--text-secondary);
 }
 
@@ -392,7 +406,7 @@ a {
 }
 
 .footer-contact p {
-  font-size: 0.85rem;
+  font-size: var(--text-body-sm);
   margin-bottom: 0.4rem;
   color: var(--text-secondary);
 }
@@ -409,7 +423,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: var(--text-caption);
   color: var(--text-muted);
 }
 

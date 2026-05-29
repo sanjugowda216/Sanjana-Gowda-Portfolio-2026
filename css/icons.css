@@ -16,6 +16,11 @@
   opacity: 0.85;
 }
 
+.link-icon--linkedin {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
 .footer-contact .contact-links {
   list-style: none;
 }
@@ -31,10 +36,16 @@
 }
 
 .hero-social .link-with-icon {
-  font-size: 0.8rem;
+  font-size: var(--text-caption);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-muted);
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.hero-social .link-with-icon:hover {
+  color: var(--text);
+  text-shadow: 0 0 16px rgba(31, 122, 140, 0.25);
 }
 
 .btn .btn-icon {
